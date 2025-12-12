@@ -1,0 +1,89 @@
+/* Warna Tema Baru: Biru–Ungu Gradient + Soft Glow */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+/* Container Utama */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Judul Dashboard */
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Kartu Statistik */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    margin-left: auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.13);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stat-card p {
+    margin: 6px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Grafik */
+.chart-wrapper {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.chart-wrapper h2 {
+    margin-top: 0;
+    text-align: left;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.chart {
+    width: 100%;
+    border-radius: 12px;
+    background: white;
+    padding: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .stats-container {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

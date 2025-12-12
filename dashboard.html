@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Sortasi Buah</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+<div class="container">
+
+    <h1>DASHBOARD SORTASI BUAH</h1>
+
+    {% if not alat_on %}
+        <div class="alert">
+            <h2>⚠️ Alat Belum Aktif</h2>
+            <p>Silakan nyalakan mini conveyor untuk mulai menerima data sensor.</p>
+        </div>
+
+    {% else %}
+        <div class="stats-box">
+            <div class="card">
+                <h3>Minimum</h3>
+                <p class="value">{{ minimum }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Maksimum</h3>
+                <p class="value">{{ maximum }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Rata-rata</h3>
+                <p class="value">{{ mean }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Standar Deviasi</h3>
+                <p class="value">{{ stdv }}</p>
+            </div>
+        </div>
+
+        <div class="chart-wrapper">
+            <h2>Grafik Intensitas Sensor (100 Data Terakhir)</h2>
+            <img class="chart" src="data:image/png;base64,{{ chart_url }}">
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>
